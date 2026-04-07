@@ -86,7 +86,7 @@ const assignments = [
   {
     id: 10,
     title: "Assignment 10 -> Assignment Dashboard",
-    embedUrl: "https://drive.google.com/file/d/YOUR_FILE_ID_10/preview",
-    openUrl:  "https://drive.google.com/file/d/YOUR_FILE_ID_10/view",
+    embedUrl: "https://aquibkhanjb-pixel.github.io/REM_Dashboard/",
+    openUrl:  "https://aquibkhanjb-pixel.github.io/REM_Dashboard/",
   },
 ];
