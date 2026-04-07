@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aquib Khan — Assignment Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══ HERO ══════════════════════════════════════════════════ -->
+  <header class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow g1"></div>
+    <div class="hero-glow g2"></div>
+    <div class="hero-glow g3"></div>
+
+    <div class="hero-inner">
+
+      <!-- Left — Profile -->
+      <div class="profile-col">
+        <div class="avatar-ring">
+          <img
+            src="ProfileAquib.jpg"
+            alt="Aquib Khan"
+            class="avatar-img"
+            onerror="this.style.display='none';document.getElementById('avatarFallback').style.display='flex';"
+          />
+          <div class="avatar-fallback" id="avatarFallback">AK</div>
+        </div>
+
+        <div class="profile-text">
+          <span class="hero-eyebrow">Student Portfolio</span>
+
+          <h1 class="hero-name">
+            Aquib<br />
+            <span class="hero-name-accent">Khan</span>
+          </h1>
+
+          <div class="hero-tags">
+            <span class="hero-tag hero-tag--highlight">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+              22108A0051
+            </span>
+            <span class="hero-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              Excs / A
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right — Stats + CTA -->
+      <div class="hero-right">
+        <div class="stat-card">
+          <div class="stat-ring">
+            <span class="stat-num" id="totalCount">0</span>
+          </div>
+          <span class="stat-label">Assignments<br/>Submitted</span>
+        </div>
+        <a class="cta-btn" href="mailto:">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contact Me
+        </a>
+      </div>
+
+    </div>
+
+    <div class="scroll-hint">
+      <span>View all assignments</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </header>
+
+  <!-- ══ ASSIGNMENTS SECTION ════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">All Assignments</h2>
+      <p class="section-sub">Click any card to view the full preview</p>
+    </div>
+    <div class="assignments-grid" id="assignmentsGrid"></div>
+  </section>
+
+  <!-- ══ MODAL ══════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-tabs" id="modalTabs"></div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer">
+        <a class="modal-open-link" id="modalOpenLink" target="_blank" rel="noopener">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Open in new tab
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="assignments.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
